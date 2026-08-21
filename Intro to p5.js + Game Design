@@ -1,0 +1,101 @@
+/* SETUP RUNS ONCE */
+function setup() {
+  //sets the screen size
+  createCanvas(400, 400);
+
+  //sets the background color
+  background(203,192,211);
+}
+
+/* DRAW LOOP REPEATS */
+function draw() {
+  angleMode(DEGREES);
+  rectMode(CENTER);
+
+  push();
+  
+  //Hair behind ear
+  rotate(-10);
+  fill(0,0,0);
+  rect(240,250,45,170);
+  pop();
+  fill(0,0,0);
+  triangle(260,100,320,180,310,280);
+
+  //Face
+  fill(253,242,230);
+  strokeWeight(3);
+  ellipse(width/2, height/2, 175, 200);
+
+  //Eyes
+  if (mouseIsPressed) {
+    //Eyes closed
+    background(129,178,154);
+    push();
+    rotate(-10);
+    fill(0,0,0);
+    rect(240,250,45,170);
+    pop();
+    fill(0,0,0);
+    triangle(260,100,320,180,310,280);
+    fill(253,242,230);
+    strokeWeight(3);
+    ellipse(width/2, height/2, 175, 200);
+    fill(0);
+    strokeWeight(2);
+    ellipse(170,170,eyeWidth,eyeHeight/8);
+    ellipse(230,170,eyeWidth,eyeHeight/8);
+    fill(255,255,255);
+  arc(200, 230, 50, 50, 0, 180);
+  } else {
+    //Eyes open
+    background(203,192,211);
+    push();
+    rotate(-10);
+    fill(0,0,0);
+    rect(240,250,45,170);
+    pop();
+    fill(0,0,0);
+    triangle(260,100,320,180,310,280);
+    fill(253,242,230);
+    strokeWeight(3);
+    ellipse(width/2, height/2, 175, 200);
+    fill(255,255,255);
+    strokeWeight(2);
+    ellipse(170, 170, eyeWidth, eyeHeight);
+    ellipse(230, 170, eyeWidth, eyeHeight);
+    fill(0);
+    ellipse(170, 170, pupilWidth, pupilHeight);
+    ellipse(230, 170, pupilWidth, pupilHeight);
+    fill('#ea9999ff');
+  arc(200, 230, 50, 50, 0, 180);
+
+  }
+
+  //Ear
+  fill(253,242,230);
+  strokeWeight(2);
+  arc(288, 200, 40, 50, 270, 90);
+
+
+  //Hair
+  rotate(7);
+  fill('#FF000D');
+  rect(150,190,50,170);
+  fill(0,0,0);
+  triangle(100,160,137,80,230,80);
+  triangle(130,65,260,50,315,140);
+  fill('#FF000D');
+  triangle(145,245,120,140,200,100);
+  triangle(130,140,190,70,280,100);
+
+  //Text
+  fill(0);
+  textSize(15);
+  text('My name is Emily \nand I love F1 and \nRock Climbing!', 20, 20);
+
+  //Directions for mouse press
+  fill(0);
+  textSize(15);
+  text('Click to see \nme blink \nand smile!',350,300);
+}
