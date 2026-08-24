@@ -1,0 +1,18 @@
+### Project Requirements
+Your project should:
+- Include at least five screens with text related to your story on each.
+- Start on a home screen that begins the story.
+- Include at least two screens that offer players a choice between two options.
+- Use p5play properties to style your button sprites.
+- Apply nested conditionals, variables, and the `mouse.presses` method to code branching paths in your story.
+- Create and call a function for each screen to keep your code organized.
+- Optional:
+  - Create a flowchart and storyboard to prototype your CYOA mod.
+  - Mod the base game to make it your own by updating the game text and visuals to display your own story.
+
+
+### Optional Spice Level + Extensions
+You can extend your project further by:
+- Trying a Spice Level Challenge (See Part 6)
+- Making it accessible (See HQ for details)
+- Adding more screens (See HQ for details)
