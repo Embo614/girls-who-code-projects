@@ -12,3 +12,6 @@ You can extend your project further by:
 - Plot your favorite movie
 - Explore more data
 - Visualize data creatively
+
+###  Attributions
+The rotten_tomatoes_movies.csv data was originally scrapped by Stefano Leone and is available on Kaggle for CC0:Public Domain Use: https://www.kaggle.com/datasets/stefanoleone992/rotten-tomatoes-movies-and-critic-reviews-dataset?select=rotten_tomatoes_movies.csv
