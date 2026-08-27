@@ -1,0 +1,28 @@
+Welcome! This program will encrypt or decrypt your secret message using the Caesar cipher. 
+ 
+When creating your message, you may only choose from the following characters: abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+ 
+Let's get started!
+ 
+What is your message? 
+Encrypt this message!
+What is the key? Choose a number from 0 to 93. 
+5
+Do you want to encrypt or decrypt? 
+encrypt
+Your encrypted message is: JshwDuy ymnx rjxxflj&
+
+
+Welcome! This program will encrypt or decrypt your secret message using the Caesar cipher. 
+ 
+When creating your message, you may only choose from the following characters: abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+ 
+Let's get started!
+ 
+What is your message? 
+JshwDuy ymnx rjxxflj&
+What is the key? Choose a number from 0 to 93. 
+5
+Do you want to encrypt or decrypt? 
+decrypt
+Your decrypted message is: Encrypt this message!
