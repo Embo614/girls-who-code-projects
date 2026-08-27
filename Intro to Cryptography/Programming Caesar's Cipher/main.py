@@ -37,4 +37,4 @@ for character in initialMessage:
         shiftedMessage = shiftedMessage + character
 
 # Print the shifted message
-print("Your" + mode.lower() + "ed message is: " + shiftedMessage)
+print("Your " + mode.lower() + "ed message is: " + shiftedMessage)
