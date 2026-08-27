@@ -1,0 +1,337 @@
+We will be performing data analysis on this Indicators of Heart Disease Dataset. Here is a sample of it: 
+ 
+  HeartDisease    BMI Smoking AlcoholDrinking     Sex AgeCategory   Race  \
+0           No  29.12      No              No  Female       60-64  White   
+1           No  22.55     Yes              No  Female       70-74  White   
+2          Yes  33.91     Yes              No    Male       60-64  White   
+3           No  29.50     Yes             Yes    Male       40-44  White   
+4           No  28.29      No             Yes  Female       65-69  White   
+ 
+  PhysicalActivity    GenHealth  
+0              Yes  4-Very good  
+1              Yes  5-Excellent  
+2               No       3-Good  
+3              Yes  4-Very good  
+4              Yes       3-Good  
+ 
+ Press Enter to continue.
+ 
+
+ 
+Here is a preview of the dataset after label encoding. 
+ 
+   HeartDisease    BMI  Smoking  AlcoholDrinking  Sex  AgeCategory   Race  \
+0             0  29.12        0                0    0            8  White   
+1             0  22.55        1                0    0           10  White   
+2             1  33.91        1                0    1            8  White   
+3             0  29.50        1                1    1            4  White   
+4             0  28.29        0                1    0            9  White   
+ 
+   PhysicalActivity  GenHealth  
+0                 1          3  
+1                 1          4  
+2                 0          2  
+3                 1          3  
+4                 1          2  
+ 
+Press Enter to continue.
+ 
+
+ 
+Here is a preview of the dataset after one hot encoding. This will be the dataset used for data analysis: 
+ 
+   HeartDisease    BMI  Smoking  AlcoholDrinking  Sex  AgeCategory  \
+0             0  29.12        0                0    0            8   
+1             0  22.55        1                0    0           10   
+2             1  33.91        1                0    1            8   
+3             0  29.50        1                1    1            4   
+4             0  28.29        0                1    0            9   
+ 
+   PhysicalActivity  GenHealth  Race_American Indian/Alaskan Native  \
+0                 1          3                                  0.0   
+1                 1          4                                  0.0   
+2                 0          2                                  0.0   
+3                 1          3                                  0.0   
+4                 1          2                                  0.0   
+ 
+   Race_Asian  Race_Black  Race_Hispanic  Race_Other  Race_White  
+0         0.0         0.0            0.0         0.0         1.0  
+1         0.0         0.0            0.0         0.0         1.0  
+2         0.0         0.0            0.0         0.0         1.0  
+3         0.0         0.0            0.0         0.0         1.0  
+4         0.0         0.0            0.0         0.0         1.0  
+ 
+Press Enter to continue.
+ 
+
+The accuracy with the testing data set of the Decision Tree is: 0.7065
+The confusion matrix of the tree is: 
+[[ 108   43]
+ [ 544 1305]]
+The accuracy with the training data set of the Decision Tree is: 0.7375
+ 
+Press Enter to continue.
+ 
+
+ 
+Below is another application of decision trees and considerations for using them:
+ 
+ 
+In rock climbing, Search and Rescue teams can use Decision Trees to rapidly evaluate injury severity, weather, and terrain steepness to standardise emergency evacuation protocols under extreme stress.
+ 
+Some factors to ensure the model performs carefully include: evaluating objective physics (like weight and tension) rather than relying on male-centric historical data that could miscalculate safety margins for shorter or lighter climbers, excluding factors like gear brand to prevent the tree from penalising those using older, inspected equipment and including diverse data from remote crags so the model does not inaccurately assume that cell service or helicopter access are available everywhere.
+ 
+Below is a text representation of how the Decision Tree makes choices:
+ 
+ 
+Press Enter to continue.
+ 
+
+|--- AgeCategory <= 5.50
+|   |--- GenHealth <= 1.50
+|   |   |--- PhysicalActivity <= 0.50
+|   |   |   |--- Race_Hispanic <= 0.50
+|   |   |   |   |--- Race_White <= 0.50
+|   |   |   |   |   |--- BMI <= 46.75
+|   |   |   |   |   |   |--- BMI <= 35.69
+|   |   |   |   |   |   |   |--- weights: [7.13, 11.39] class: Heart Disease
+|   |   |   |   |   |   |--- BMI >  35.69
+|   |   |   |   |   |   |   |--- weights: [1.10, 22.77] class: Heart Disease
+|   |   |   |   |   |--- BMI >  46.75
+|   |   |   |   |   |   |--- weights: [2.19, 0.00] class: No Heart Disease
+|   |   |   |   |--- Race_White >  0.50
+|   |   |   |   |   |--- BMI <= 27.58
+|   |   |   |   |   |   |--- BMI <= 26.70
+|   |   |   |   |   |   |   |--- weights: [6.58, 11.39] class: Heart Disease
+|   |   |   |   |   |   |--- BMI >  26.70
+|   |   |   |   |   |   |   |--- weights: [0.00, 5.69] class: Heart Disease
+|   |   |   |   |   |--- BMI >  27.58
+|   |   |   |   |   |   |--- GenHealth <= 0.50
+|   |   |   |   |   |   |   |--- weights: [3.29, 0.00] class: No Heart Disease
+|   |   |   |   |   |   |--- GenHealth >  0.50
+|   |   |   |   |   |   |   |--- weights: [10.96, 0.00] class: No Heart Disease
+|   |   |   |--- Race_Hispanic >  0.50
+|   |   |   |   |--- weights: [8.22, 0.00] class: No Heart Disease
+|   |   |--- PhysicalActivity >  0.50
+|   |   |   |--- AgeCategory <= 3.50
+|   |   |   |   |--- weights: [41.11, 0.00] class: No Heart Disease
+|   |   |   |--- AgeCategory >  3.50
+|   |   |   |   |--- Race_White <= 0.50
+|   |   |   |   |   |--- weights: [12.61, 0.00] class: No Heart Disease
+|   |   |   |   |--- Race_White >  0.50
+|   |   |   |   |   |--- AgeCategory <= 4.50
+|   |   |   |   |   |   |--- BMI <= 24.34
+|   |   |   |   |   |   |   |--- weights: [1.64, 0.00] class: No Heart Disease
+|   |   |   |   |   |   |--- BMI >  24.34
+|   |   |   |   |   |   |   |--- weights: [3.29, 17.08] class: Heart Disease
+|   |   |   |   |   |--- AgeCategory >  4.50
+|   |   |   |   |   |   |--- BMI <= 42.30
+|   |   |   |   |   |   |   |--- weights: [8.22, 0.00] class: No Heart Disease
+|   |   |   |   |   |   |--- BMI >  42.30
+|   |   |   |   |   |   |   |--- weights: [1.10, 5.69] class: Heart Disease
+|   |--- GenHealth >  1.50
+|   |   |--- BMI <= 47.33
+|   |   |   |--- Smoking <= 0.50
+|   |   |   |   |--- BMI <= 23.74
+|   |   |   |   |   |--- BMI <= 23.72
+|   |   |   |   |   |   |--- AgeCategory <= 2.50
+|   |   |   |   |   |   |   |--- weights: [157.32, 5.69] class: No Heart Disease
+|   |   |   |   |   |   |--- AgeCategory >  2.50
+|   |   |   |   |   |   |   |--- weights: [78.38, 17.08] class: No Heart Disease
+|   |   |   |   |   |--- BMI >  23.72
+|   |   |   |   |   |   |--- AgeCategory <= 2.50
+|   |   |   |   |   |   |   |--- weights: [1.10, 0.00] class: No Heart Disease
+|   |   |   |   |   |   |--- AgeCategory >  2.50
+|   |   |   |   |   |   |   |--- weights: [0.55, 5.69] class: Heart Disease
+|   |   |   |   |--- BMI >  23.74
+|   |   |   |   |   |--- Race_Black <= 0.50
+|   |   |   |   |   |   |--- PhysicalActivity <= 0.50
+|   |   |   |   |   |   |   |--- weights: [51.53, 5.69] class: No Heart Disease
+|   |   |   |   |   |   |--- PhysicalActivity >  0.50
+|   |   |   |   |   |   |   |--- weights: [377.12, 0.00] class: No Heart Disease
+|   |   |   |   |   |--- Race_Black >  0.50
+|   |   |   |   |   |   |--- AgeCategory <= 3.50
+|   |   |   |   |   |   |   |--- weights: [28.50, 0.00] class: No Heart Disease
+|   |   |   |   |   |   |--- AgeCategory >  3.50
+|   |   |   |   |   |   |   |--- weights: [14.25, 5.69] class: No Heart Disease
+|   |   |   |--- Smoking >  0.50
+|   |   |   |   |--- GenHealth <= 2.50
+|   |   |   |   |   |--- Race_Hispanic <= 0.50
+|   |   |   |   |   |   |--- BMI <= 36.44
+|   |   |   |   |   |   |   |--- weights: [84.41, 11.39] class: No Heart Disease
+|   |   |   |   |   |   |--- BMI >  36.44
+|   |   |   |   |   |   |   |--- weights: [13.16, 11.39] class: No Heart Disease
+|   |   |   |   |   |--- Race_Hispanic >  0.50
+|   |   |   |   |   |   |--- Sex <= 0.50
+|   |   |   |   |   |   |   |--- weights: [3.29, 17.08] class: Heart Disease
+|   |   |   |   |   |   |--- Sex >  0.50
+|   |   |   |   |   |   |   |--- weights: [6.03, 0.00] class: No Heart Disease
+|   |   |   |   |--- GenHealth >  2.50
+|   |   |   |   |   |--- AgeCategory <= 2.50
+|   |   |   |   |   |   |--- weights: [113.47, 0.00] class: No Heart Disease
+|   |   |   |   |   |--- AgeCategory >  2.50
+|   |   |   |   |   |   |--- BMI <= 20.30
+|   |   |   |   |   |   |   |--- weights: [4.39, 5.69] class: Heart Disease
+|   |   |   |   |   |   |--- BMI >  20.30
+|   |   |   |   |   |   |   |--- weights: [132.65, 17.08] class: No Heart Disease
+|   |   |--- BMI >  47.33
+|   |   |   |--- AgeCategory <= 4.50
+|   |   |   |   |--- BMI <= 47.51
+|   |   |   |   |   |--- weights: [1.10, 0.00] class: No Heart Disease
+|   |   |   |   |--- BMI >  47.51
+|   |   |   |   |   |--- weights: [10.96, 0.00] class: No Heart Disease
+|   |   |   |--- AgeCategory >  4.50
+|   |   |   |   |--- Race_White <= 0.50
+|   |   |   |   |   |--- weights: [0.55, 0.00] class: No Heart Disease
+|   |   |   |   |--- Race_White >  0.50
+|   |   |   |   |   |--- weights: [0.00, 11.39] class: Heart Disease
+|--- AgeCategory >  5.50
+|   |--- GenHealth <= 2.50
+|   |   |--- AgeCategory <= 9.50
+|   |   |   |--- Smoking <= 0.50
+|   |   |   |   |--- GenHealth <= 1.50
+|   |   |   |   |   |--- BMI <= 47.98
+|   |   |   |   |   |   |--- Race_Black <= 0.50
+|   |   |   |   |   |   |   |--- weights: [52.62, 108.16] class: Heart Disease
+|   |   |   |   |   |   |--- Race_Black >  0.50
+|   |   |   |   |   |   |   |--- weights: [14.80, 11.39] class: No Heart Disease
+|   |   |   |   |   |--- BMI >  47.98
+|   |   |   |   |   |   |--- weights: [3.29, 0.00] class: No Heart Disease
+|   |   |   |   |--- GenHealth >  1.50
+|   |   |   |   |   |--- Race_Hispanic <= 0.50
+|   |   |   |   |   |   |--- BMI <= 26.95
+|   |   |   |   |   |   |   |--- weights: [52.62, 22.77] class: No Heart Disease
+|   |   |   |   |   |   |--- BMI >  26.95
+|   |   |   |   |   |   |   |--- weights: [126.62, 125.24] class: No Heart Disease
+|   |   |   |   |   |--- Race_Hispanic >  0.50
+|   |   |   |   |   |   |--- weights: [19.19, 0.00] class: No Heart Disease
+|   |   |   |--- Smoking >  0.50
+|   |   |   |   |--- Race_Hispanic <= 0.50
+|   |   |   |   |   |--- BMI <= 16.78
+|   |   |   |   |   |   |--- weights: [3.29, 0.00] class: No Heart Disease
+|   |   |   |   |   |--- BMI >  16.78
+|   |   |   |   |   |   |--- BMI <= 20.23
+|   |   |   |   |   |   |   |--- weights: [5.48, 51.23] class: Heart Disease
+|   |   |   |   |   |   |--- BMI >  20.23
+|   |   |   |   |   |   |   |--- weights: [223.10, 580.65] class: Heart Disease
+|   |   |   |   |--- Race_Hispanic >  0.50
+|   |   |   |   |   |--- BMI <= 27.62
+|   |   |   |   |   |   |--- BMI <= 23.00
+|   |   |   |   |   |   |   |--- weights: [3.29, 0.00] class: No Heart Disease
+|   |   |   |   |   |   |--- BMI >  23.00
+|   |   |   |   |   |   |   |--- weights: [4.39, 11.39] class: Heart Disease
+|   |   |   |   |   |--- BMI >  27.62
+|   |   |   |   |   |   |--- weights: [8.77, 0.00] class: No Heart Disease
+|   |   |--- AgeCategory >  9.50
+|   |   |   |--- Sex <= 0.50
+|   |   |   |   |--- GenHealth <= 1.50
+|   |   |   |   |   |--- BMI <= 16.22
+|   |   |   |   |   |   |--- weights: [2.19, 0.00] class: No Heart Disease
+|   |   |   |   |   |--- BMI >  16.22
+|   |   |   |   |   |   |--- AgeCategory <= 11.50
+|   |   |   |   |   |   |   |--- weights: [43.85, 142.31] class: Heart Disease
+|   |   |   |   |   |   |--- AgeCategory >  11.50
+|   |   |   |   |   |   |   |--- weights: [21.38, 159.39] class: Heart Disease
+|   |   |   |   |--- GenHealth >  1.50
+|   |   |   |   |   |--- BMI <= 34.85
+|   |   |   |   |   |   |--- Smoking <= 0.50
+|   |   |   |   |   |   |   |--- weights: [65.23, 74.00] class: Heart Disease
+|   |   |   |   |   |   |--- Smoking >  0.50
+|   |   |   |   |   |   |   |--- weights: [47.14, 125.24] class: Heart Disease
+|   |   |   |   |   |--- BMI >  34.85
+|   |   |   |   |   |   |--- weights: [16.99, 0.00] class: No Heart Disease
+|   |   |   |--- Sex >  0.50
+|   |   |   |   |--- Race_Black <= 0.50
+|   |   |   |   |   |--- GenHealth <= 1.50
+|   |   |   |   |   |   |--- Race_Asian <= 0.50
+|   |   |   |   |   |   |   |--- weights: [34.53, 392.79] class: Heart Disease
+|   |   |   |   |   |   |--- Race_Asian >  0.50
+|   |   |   |   |   |   |   |--- weights: [1.64, 0.00] class: No Heart Disease
+|   |   |   |   |   |--- GenHealth >  1.50
+|   |   |   |   |   |   |--- Race_American Indian/Alaskan Native <= 0.50
+|   |   |   |   |   |   |   |--- weights: [70.71, 341.56] class: Heart Disease
+|   |   |   |   |   |   |--- Race_American Indian/Alaskan Native >  0.50
+|   |   |   |   |   |   |   |--- weights: [1.10, 0.00] class: No Heart Disease
+|   |   |   |   |--- Race_Black >  0.50
+|   |   |   |   |   |--- BMI <= 19.22
+|   |   |   |   |   |   |--- weights: [0.00, 5.69] class: Heart Disease
+|   |   |   |   |   |--- BMI >  19.22
+|   |   |   |   |   |   |--- weights: [9.87, 0.00] class: No Heart Disease
+|   |--- GenHealth >  2.50
+|   |   |--- AgeCategory <= 9.50
+|   |   |   |--- Sex <= 0.50
+|   |   |   |   |--- BMI <= 30.49
+|   |   |   |   |   |--- BMI <= 19.41
+|   |   |   |   |   |   |--- BMI <= 19.39
+|   |   |   |   |   |   |   |--- weights: [13.16, 0.00] class: No Heart Disease
+|   |   |   |   |   |   |--- BMI >  19.39
+|   |   |   |   |   |   |   |--- weights: [0.00, 5.69] class: Heart Disease
+|   |   |   |   |   |--- BMI >  19.41
+|   |   |   |   |   |   |--- Race_Black <= 0.50
+|   |   |   |   |   |   |   |--- weights: [254.34, 11.39] class: No Heart Disease
+|   |   |   |   |   |   |--- Race_Black >  0.50
+|   |   |   |   |   |   |   |--- weights: [13.70, 5.69] class: No Heart Disease
+|   |   |   |   |--- BMI >  30.49
+|   |   |   |   |   |--- BMI <= 33.90
+|   |   |   |   |   |   |--- Race_American Indian/Alaskan Native <= 0.50
+|   |   |   |   |   |   |   |--- weights: [41.66, 28.46] class: No Heart Disease
+|   |   |   |   |   |   |--- Race_American Indian/Alaskan Native >  0.50
+|   |   |   |   |   |   |   |--- weights: [0.00, 5.69] class: Heart Disease
+|   |   |   |   |   |--- BMI >  33.90
+|   |   |   |   |   |   |--- weights: [35.63, 0.00] class: No Heart Disease
+|   |   |   |--- Sex >  0.50
+|   |   |   |   |--- Smoking <= 0.50
+|   |   |   |   |   |--- Race_White <= 0.50
+|   |   |   |   |   |   |--- weights: [35.08, 0.00] class: No Heart Disease
+|   |   |   |   |   |--- Race_White >  0.50
+|   |   |   |   |   |   |--- BMI <= 30.48
+|   |   |   |   |   |   |   |--- weights: [120.59, 45.54] class: No Heart Disease
+|   |   |   |   |   |   |--- BMI >  30.48
+|   |   |   |   |   |   |   |--- weights: [40.56, 45.54] class: Heart Disease
+|   |   |   |   |--- Smoking >  0.50
+|   |   |   |   |   |--- BMI <= 28.45
+|   |   |   |   |   |   |--- BMI <= 19.72
+|   |   |   |   |   |   |   |--- weights: [0.55, 11.39] class: Heart Disease
+|   |   |   |   |   |   |--- BMI >  19.72
+|   |   |   |   |   |   |   |--- weights: [70.71, 39.85] class: No Heart Disease
+|   |   |   |   |   |--- BMI >  28.45
+|   |   |   |   |   |   |--- BMI <= 28.60
+|   |   |   |   |   |   |   |--- weights: [0.00, 11.39] class: Heart Disease
+|   |   |   |   |   |   |--- BMI >  28.60
+|   |   |   |   |   |   |   |--- weights: [41.11, 56.93] class: Heart Disease
+|   |   |--- AgeCategory >  9.50
+|   |   |   |--- GenHealth <= 3.50
+|   |   |   |   |--- Sex <= 0.50
+|   |   |   |   |   |--- BMI <= 26.44
+|   |   |   |   |   |   |--- BMI <= 21.80
+|   |   |   |   |   |   |   |--- weights: [24.67, 39.85] class: Heart Disease
+|   |   |   |   |   |   |--- BMI >  21.80
+|   |   |   |   |   |   |   |--- weights: [60.30, 17.08] class: No Heart Disease
+|   |   |   |   |   |--- BMI >  26.44
+|   |   |   |   |   |   |--- AgeCategory <= 11.50
+|   |   |   |   |   |   |   |--- weights: [50.43, 68.31] class: Heart Disease
+|   |   |   |   |   |   |--- AgeCategory >  11.50
+|   |   |   |   |   |   |   |--- weights: [11.51, 45.54] class: Heart Disease
+|   |   |   |   |--- Sex >  0.50
+|   |   |   |   |   |--- BMI <= 23.18
+|   |   |   |   |   |   |--- Race_White <= 0.50
+|   |   |   |   |   |   |   |--- weights: [1.10, 0.00] class: No Heart Disease
+|   |   |   |   |   |   |--- Race_White >  0.50
+|   |   |   |   |   |   |   |--- weights: [6.03, 51.23] class: Heart Disease
+|   |   |   |   |   |--- BMI >  23.18
+|   |   |   |   |   |   |--- BMI <= 24.65
+|   |   |   |   |   |   |   |--- weights: [11.51, 5.69] class: No Heart Disease
+|   |   |   |   |   |   |--- BMI >  24.65
+|   |   |   |   |   |   |   |--- weights: [51.53, 119.54] class: Heart Disease
+|   |   |   |--- GenHealth >  3.50
+|   |   |   |   |--- BMI <= 21.90
+|   |   |   |   |   |--- weights: [15.35, 0.00] class: No Heart Disease
+|   |   |   |   |--- BMI >  21.90
+|   |   |   |   |   |--- BMI <= 21.94
+|   |   |   |   |   |   |--- weights: [0.00, 5.69] class: Heart Disease
+|   |   |   |   |   |--- BMI >  21.94
+|   |   |   |   |   |   |--- Sex <= 0.50
+|   |   |   |   |   |   |   |--- weights: [48.78, 11.39] class: No Heart Disease
+|   |   |   |   |   |   |--- Sex >  0.50
+|   |   |   |   |   |   |   |--- weights: [33.44, 28.46] class: No Heart Disease
+ 
