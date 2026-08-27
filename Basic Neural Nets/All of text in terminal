@@ -1,0 +1,20 @@
+Training set size: 90
+Layer sizes: 784 x 70 x 10
+Accuracy for class 0:  77%
+Accuracy for class 1:  62%
+Accuracy for class 2:  85%
+Accuracy for class 3:  54%
+Accuracy for class 4:  69%
+Accuracy for class 5:  92%
+Accuracy for class 6:  92%
+Accuracy for class 7:  31%
+Accuracy for class 8:  54%
+Accuracy for class 10:  85%
+----------
+Overall Test Accuracy: 70.0%
+Overall Training Accuracy: 100.0%
+----------
+Top 3 most frequently misidentified classes:
+Class 7: 9 mistakes
+Class 3: 6 mistakes
+Class 8: 6 mistakes
