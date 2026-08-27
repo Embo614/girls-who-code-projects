@@ -1,0 +1,44 @@
+My favourite movie is Back to the Future
+ 
+The data for my favorite movie is:
+ 
+             movie_title  year_released  critic_rating  audience_rating  \
+2919  Back to the Future           1985             96               94   
+ 
+                                                     genres  
+2919  Action & Adventure, Comedy, Science Fiction & Fantasy  
+ 
+ 
+ 
+We will be comparing Back to the Future to other movies under the genre Science Fiction in the data set.
+ 
+There are 1758 movies under the category Science Fiction.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+Press enter to see more information about how Back to the Future compares to other movies in this genre.
+ 
+
+The min audience rating of the data set is: 8
+Back to the Future is rated 84 points higher than the lowest rated movie.
+ 
+The max audience rating of the data set is: 100
+Back to the Future is rated 6 points lower than the highest rated movie.
+ 
+The mean audience rating of the data set is: 56.85381114903299
+Back to the Future is higher than the mean movie rating.
+The median audience rating of the data set is: 57.0
+Back to the Future is higher than the median movie rating.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+Press enter to see data visualizations.
+ 
+
+According to the histogram, the modal value for the audience rating of science fiction movies is between 55 and 60. The histogram is overall a hill-like shape which begins at 5 and ends at 100. However, it is interesting that there is a clear fluctuation in the number of science fiction movies between audience ratings of 40 and 75.
+ 
+Press enter to see the next data visualization.
+ 
+
+According to the scatter plot, there is a positive correlation between the critic rating and audience rating of science fiction movies. However, there are a few outliers including a few movies where the critic rating is near to 100 but the audience rating is much lower (and vice versa). Despite the outliers, the positive correlation is clear due to the dataset containing so many movies that do follow this general trend. This includes my own favourite movie, Back to the Future, which you can see follows this positive correlation trend.
+ 
+ 
+Thank you for reading through my data analysis!
