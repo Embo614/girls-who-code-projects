@@ -1,0 +1,13 @@
+### Project Requirements
+- Your project should:
+- Vary responses based on user input.
+- Use a conditional to identify the details of a data breach and the organization's response.
+- Use a while loop to repeat breach research.
+- Use a conditional to display three reflections:  your reaction, its connection to the CIA Triad, and your advice.
+- Use a while loop to repeat reflections.
+- Use a break statement to end the while-loops.
+
+### Extensions
+- Add more details and thoughts around your data breach.
+- Paraphrase your statements to teach a community member.
+- Add actionable steps for users to protect their information.
