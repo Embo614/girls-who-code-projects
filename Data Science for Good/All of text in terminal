@@ -1,0 +1,124 @@
+Bangladesh is a low-lying delta dominated by massive river systems and seasonal floods, whereas Indonesia is a tropical volcanic archipelago made up of over 17,000 islands. Lets compare how temperatures and water access vary between these countries.
+ 
+Press return to continue.
+ 
+
+(832, 135)
+Colombia                            Pakistan                            Egypt                               
+Madagascar                          Malawi                              Morocco                             
+Niger                               Zambia                              Ghana                               
+India                               Kenya                               Senegal                             
+Bangladesh                          Cote d'Ivoire                       Indonesia                           
+Zimbabwe                            Guatemala                           Uganda                              
+Benin                               Mali                                Nepal                               
+Peru                                Tanzania                            Jordan                              
+Mozambique                          Vietnam                             Bolivia                             
+Nicaragua                           South Africa                        Togo                                
+Armenia                             Cambodia                            Ethiopia                            
+Gabon                               Haiti                               Namibia                             
+Burkina Faso                        Nigeria                             Philippines                         
+Turkey                              Cameroon                            Lesotho                             
+Guinea                              Honduras                            Congo Democratic Republic           
+Liberia                             Rwanda                              Sierra Leone                        
+Maldives                            Timor-Leste                         Burundi                             
+Tajikistan                          
+ 
+0      False
+1      False
+2      False
+3      False
+4      False
+       ...  
+827    False
+828    False
+829    False
+830    False
+831    False
+Name: country_name, Length: 832, dtype: bool
+0      False
+1      False
+2      False
+3      False
+4      False
+       ...  
+827    False
+828    False
+829    False
+830    False
+831    False
+Name: country_name, Length: 832, dtype: bool
+    country_name  year  ...  EI_internet_week_p  EI_mobile_p
+23    Bangladesh  1994  ...                 NaN          NaN
+39    Bangladesh  1995  ...                 NaN          NaN
+57    Bangladesh  1996  ...                 NaN          NaN
+80    Bangladesh  1997  ...                 NaN          NaN
+106   Bangladesh  1998  ...                 NaN          NaN
+136   Bangladesh  1999  ...                 NaN          NaN
+167   Bangladesh  2000  ...                 NaN          NaN
+203   Bangladesh  2001  ...                 NaN          NaN
+239   Bangladesh  2002  ...                 NaN          NaN
+274   Bangladesh  2003  ...                 NaN          NaN
+312   Bangladesh  2004  ...                 NaN          NaN
+351   Bangladesh  2005  ...                 NaN          NaN
+392   Bangladesh  2006  ...                 NaN          NaN
+433   Bangladesh  2007  ...                 NaN          NaN
+474   Bangladesh  2008  ...                 NaN          NaN
+517   Bangladesh  2009  ...                 NaN          NaN
+560   Bangladesh  2010  ...                 NaN          NaN
+604   Bangladesh  2011  ...                 NaN          NaN
+647   Bangladesh  2012  ...                 NaN          NaN
+689   Bangladesh  2013  ...                 NaN          NaN
+727   Bangladesh  2014  ...                 NaN          NaN
+760   Bangladesh  2015  ...                 NaN          NaN
+788   Bangladesh  2016  ...                 NaN          NaN
+809   Bangladesh  2017  ...                 NaN        51.02
+ 
+[24 rows x 135 columns]
+    country_name  year  ...  EI_internet_week_p  EI_mobile_p
+29     Indonesia  1994  ...                 NaN          NaN
+46     Indonesia  1995  ...                 NaN          NaN
+65     Indonesia  1996  ...                 NaN          NaN
+88     Indonesia  1997  ...                 NaN          NaN
+115    Indonesia  1998  ...                 NaN          NaN
+145    Indonesia  1999  ...                 NaN          NaN
+180    Indonesia  2000  ...                 NaN          NaN
+216    Indonesia  2001  ...                 NaN          NaN
+252    Indonesia  2002  ...                 NaN          NaN
+288    Indonesia  2003  ...                 NaN          NaN
+327    Indonesia  2004  ...                 NaN          NaN
+368    Indonesia  2005  ...                 NaN          NaN
+409    Indonesia  2006  ...                 NaN          NaN
+450    Indonesia  2007  ...                 NaN          NaN
+491    Indonesia  2008  ...                 NaN          NaN
+533    Indonesia  2009  ...                 NaN          NaN
+577    Indonesia  2010  ...                 NaN          NaN
+620    Indonesia  2011  ...                 NaN          NaN
+662    Indonesia  2012  ...                 NaN          NaN
+702    Indonesia  2013  ...                 NaN          NaN
+739    Indonesia  2014  ...                 NaN          NaN
+769    Indonesia  2015  ...                 NaN          NaN
+795    Indonesia  2016  ...                 NaN          NaN
+813    Indonesia  2017  ...               41.94        76.78
+ 
+[24 rows x 135 columns]
+ 
+Despite having an abundance of surface water, Bangladesh faces severe groundwater contamination issues, specifically naturally occurring arsenic in shallow wells and rising saltwater intrusion in coastal aquifers caused by sea level rise.
+ 
+The flat trend line for Bangladesh reflects widespread lack of piped, high quality and treated household water infrastructure compared to Indonesia’s more variable development.
+ 
+In regions with poor household water access, the physical burden of collecting drinking water often falls on teenage girls and women, directly cutting into study time and school attendance. Lets hear more about their stories.
+ 
+Press return to continue.
+ 
+
+ 
+Amina, a 16 year old student in Bangladesh, has to walk over an hour each morning to fetch clean drinking water because local wells are contaminated.
+ 
+Lestari, a 17 year old student living in Java, notices how piped water infrastructure rapidly drops off once you move away from main commercial hubs. 
+ 
+Press return to continue.
+ 
+
+Based on these findings, my proposed reserach question is:
+ 
+Why does high quality household water access remain consistently below 8% across regions in Bangladesh regardless of mean temperature, while Indonesia shows a sharp upward variation across similar temperature ranges?
