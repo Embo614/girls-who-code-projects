@@ -1,0 +1,12 @@
+### Project Requirements
+Your project should:
+- Show the dataframe after being label encoded and one hot encoded.
+- Use at least two parameters when creating your Decision Tree.
+- Print the training accuracy score, testing accuracy score, and confusion matrix.
+- Print how a Decision Tree can be applied to a different field, and give 2-3 factors to be wary of.
+- Print a text representation of your Decision Tree through the console.
+
+### Extensions
+You can extend your project further by:
+- Examine feature importance
+- Create a random forest
